@@ -4406,6 +4406,8 @@ with pkgs;
 
   storebrowse = callPackage ../tools/system/storebrowse { };
 
+  suricata = callPackage ../applications/networking/ids/suricata {};
+
   syntex = callPackage ../tools/graphics/syntex {};
 
   fusesmb = callPackage ../tools/filesystems/fusesmb { samba = samba3; };
