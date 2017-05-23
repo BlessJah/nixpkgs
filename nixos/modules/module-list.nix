@@ -557,6 +557,7 @@
   ./services/scheduling/fcron.nix
   ./services/scheduling/marathon.nix
   ./services/search/elasticsearch.nix
+  ./services/networking/ids/suricata.nix
   ./services/search/hound.nix
   ./services/search/kibana.nix
   ./services/search/solr.nix
