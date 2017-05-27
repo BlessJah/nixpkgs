@@ -15,6 +15,6 @@ stdenv.mkDerivation rec {
 
   configureFlags= [ "--enable-pie" ] ;
   enableParallelBuilding = true;
-  installTargets = "install install-conf";
+  installTargets = "install";
   nativeBuildInputs = [ pkgconfig pcre libyaml libpcap zlib ];
 }

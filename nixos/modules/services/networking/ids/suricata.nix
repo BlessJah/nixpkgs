@@ -8,7 +8,6 @@ let
     # Suricata configuration file. In addition to the comments describing all
     # options in this file, full documentation can be found at:
     # https://redmine.openinfosecfoundation.org/projects/suricata/wiki/Suricatayaml
-
     vars:
       address-groups:
         HOME_NET: "any"
@@ -19,11 +18,19 @@ let
       classification-file: ${pkgs.suricata}/etc/suricata/classification.config
       reference-config-file: ${pkgs.suricata}/etc/suricata/reference.config
       default-log-dir: /tmp/var/log/suricata/
-      outputs:
-       - fast:
+    outputs:
+      - dns-log:
+          enabled: yes
+          filename: dns.log
+          append: yes
+      - fast:
           enabled: yes
           filename: fast.log
           append: yes/no
+        - http-log:
+            enabled: yes
+            filename: http.log
+            append: yes
     af-packet:
       - interface: eth0
   '';
